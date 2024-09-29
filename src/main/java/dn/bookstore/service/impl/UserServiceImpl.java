@@ -9,6 +9,7 @@ import dn.bookstore.mapper.UserMapper;
 import dn.bookstore.repository.UserRepository;
 import dn.bookstore.service.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.keycloak.admin.client.CreatedResponseUtil;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.RealmResource;
@@ -26,6 +27,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     private static final String ROLE_USER = "ROLE_USER";
@@ -53,6 +55,7 @@ public class UserServiceImpl implements UserService {
                 userRegistryDto.getUsername(),
                 encodePassword,
                 userRegistryDto.getEmail());
+        log.info("Created user: {}", savedUser);
 
         return userRepository.save(savedUser);
 
