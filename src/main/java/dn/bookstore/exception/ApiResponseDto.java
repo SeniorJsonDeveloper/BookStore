@@ -1,4 +1,4 @@
-package dn.bookstore.dto;
+package dn.bookstore.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

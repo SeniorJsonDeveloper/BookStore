@@ -1,9 +1,10 @@
-package dn.bookstore.security.keycloak;
+package dn.bookstore.service;
 
-import dn.bookstore.dto.UserRegistryDto;
+import dn.bookstore.dto.user.UserOutDto;
+import dn.bookstore.dto.user.UserRegistryDto;
 import dn.bookstore.entity.UserEntity;
 
-public interface UserClient {
+public interface UserService {
 
     UserEntity createUser(UserRegistryDto userRegistryDto);
 

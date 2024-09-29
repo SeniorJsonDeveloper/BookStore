@@ -1,4 +1,9 @@
 package dn.bookstore.repository;
 
-public interface BookFileRepository extends org.springframework.data.jpa.repository.JpaRepository<dn.bookstore.entity.BookFileEntity, java.lang.String> {
+import dn.bookstore.entity.BookFileEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BookFileRepository extends JpaRepository<BookFileEntity, String> {
+
+    BookFileEntity findByHash(String hash);
 }

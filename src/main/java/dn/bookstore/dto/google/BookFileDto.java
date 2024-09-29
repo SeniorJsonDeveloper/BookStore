@@ -1,4 +1,4 @@
-package dn.bookstore.dto.google.books;
+package dn.bookstore.dto.google;
 
 import dn.bookstore.entity.BookEntity;
 import jakarta.persistence.Column;

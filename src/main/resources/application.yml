@@ -1,1 +1,71 @@
-spring.application.name=BookStore
+server:
+  port: 9090
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: danilanovikov
+    password: demo2228
+  profiles:
+    active: dev
+  keycloak:
+    url: http://localhost:9080
+    token-url: http://localhost:9080/realms/BookStore/protocol/openid-connect/token
+    realm: BookStore
+    client:
+      id: book-keycloak-client
+      secret: 9VdYZYEB7qnFpdf3Wu3e5RKl4EU4mZeM
+
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  data:
+    redis:
+      port: 6379
+      host: localhost
+  thymeleaf:
+    prefix: classpath:/spring-frontend/
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9080/realms/BookStore/protocol/openid-connect/certs
+          issuer-uri: http://localhost:9080/realms/BookStore
+file:
+  upload:
+    path: /danilanovikov/upload/files
+  download:
+    downloadPath: /danilanovikov/downloads
+integration:
+  google:
+    books:
+      api:
+        key: as;dlsdakllfdskxzcsdvfkjxzvdsfx
+  twilio:
+    sid: uiersdfghuidhf
+    phone: 79771007235
+    token: sduawq-ae0q=w-0e
+  mail:
+    login: novikovdanila7@gmail.com
+    password: 13371488228
+  payments:
+    robokassa:
+      merchant:
+        login: BichBookShop
+        testPassword: uQhzV11obHpx5wIBRS72
+
+
+
+
+
+
+
+
+

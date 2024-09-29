@@ -1,4 +1,4 @@
-package dn.bookstore.security;
+package dn.bookstore.security.keycloak;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

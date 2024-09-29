@@ -1,4 +1,7 @@
-package dn.bookstore;
+package dn.bookstore.repository;
 
-public interface AuthorRepository extends org.springframework.data.jpa.repository.JpaRepository<dn.bookstore.entity.AuthorEntity, java.lang.String> {
+import dn.bookstore.entity.AuthorEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AuthorRepository extends JpaRepository<AuthorEntity, String> {
 }

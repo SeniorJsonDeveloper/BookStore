@@ -1,4 +1,4 @@
-package dn.bookstore.dto;
+package dn.bookstore.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

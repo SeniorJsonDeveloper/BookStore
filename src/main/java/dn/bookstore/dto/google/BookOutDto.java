@@ -1,4 +1,4 @@
-package dn.bookstore.dto.google.books;
+package dn.bookstore.dto.google;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import dn.bookstore.entity.BookEntity;

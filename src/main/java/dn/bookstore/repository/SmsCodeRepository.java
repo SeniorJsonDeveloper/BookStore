@@ -1,4 +1,9 @@
 package dn.bookstore.repository;
 
-public interface SmsCodeRepository extends org.springframework.data.jpa.repository.JpaRepository<dn.bookstore.entity.SmsCodeEntity, java.lang.String> {
-  }
+import dn.bookstore.entity.SmsCodeEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SmsCodeRepository extends JpaRepository<SmsCodeEntity, String> {
+
+    SmsCodeEntity findSmsCodeEntitiesByCode(String code);
+}
